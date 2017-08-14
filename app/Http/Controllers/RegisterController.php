@@ -7,6 +7,11 @@ use App\User;
 
 class RegisterController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest', ['except' => 'create']);
+    }
+
     public function create()
     {
         return view('register.create');
