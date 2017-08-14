@@ -10,3 +10,5 @@ Route::post('/posts/{id}/comment', 'CommentsController@store');
 
 Route::get('/register', 'RegisterController@create');
 Route::post('/register', 'RegisterController@store');
+
+Route::get('/logout', 'LoginController@destroy');
