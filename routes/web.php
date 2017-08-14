@@ -7,3 +7,6 @@ Route::get('/posts/{id}', 'PostsController@show');
 Route::post('/posts', 'PostsController@store');
 
 Route::post('/posts/{id}/comment', 'CommentsController@store');
+
+Route::get('/register', 'RegisterController@create');
+Route::post('/register', 'RegisterController@store');
