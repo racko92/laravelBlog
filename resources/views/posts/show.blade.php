@@ -7,6 +7,20 @@
         <a href="/users/{{ $post->user_id}}"> {{ $post->user->name }} </a>
     </p>
 
+    @if (count($post->tags))
+
+    <ul>
+        @foreach ($post->tags as $tag)
+            <li>
+                <a href="/posts/tags/{{ $tag->name }}">
+                    {{ $tag->name }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
+
+    @endif
+
     <p>{{ $post->body }}</p>
 
     @foreach($post->comments as $comment)
