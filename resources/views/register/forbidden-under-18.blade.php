@@ -7,6 +7,8 @@
     <hr>
 
     <p class="blog-post-meta">
-        Back to<a href="/register"> registration form.</a>
+        Back to <a href="/register"> registration form. </a>
     </p>
+
+
 @endsection

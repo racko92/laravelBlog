@@ -21,10 +21,15 @@
 
 @include('partials.navbar')
 
+
 @if ($flash = session('message'))
-<div class="alert alert-success" role="alert">
-    {{ $flash }}
-</div>
+
+    <div class="alert alert-success" role="alert">
+        
+        {{ $flash }}
+        
+    </div>
+
 @endif
 
 <div class="blog-header">

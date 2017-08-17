@@ -7,16 +7,10 @@ use App\Tag;
 
 class TagsController extends Controller
 {
-    public function index($tagId)
+    public function index(Tag $tag)
     {
-        $tag = Tag::findOrFail($tagId);
+    	$posts = $tag->posts;
 
-        $posts = $tag->posts;
-
-        return view('post.index', compact('posts'));
-    }
-    public function getRouteKetName()
-    {
-        return 'name';
+    	return view('posts.index', compact('posts'));
     }
 }

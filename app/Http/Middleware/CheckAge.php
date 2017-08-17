@@ -15,7 +15,8 @@ class CheckAge
      */
     public function handle($request, Closure $next)
     {
-        if ($request->age < 18){
+        if ($request->age < 18) {
+            
             return response(view('register.forbidden-under-18'));
         }
 
