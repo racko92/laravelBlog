@@ -28,8 +28,15 @@
     @endforeach
 
     <nav class="blog-pagination">
-        <a class="btn btn-outline-primary" href="#">Older</a>
-        <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+        <a class="btn btn-outline-{{ $posts->currentPage() == 1 ? 'secondary disabled' : 'primary' }}" href="{{ $posts->previousPageUrl() }}">
+
+            Previous
+        </a>
+        Page {{ $posts->currentPage() }} of {{ $posts->lastPage() }}
+        <a class="btn btn-outline-{{ $posts->hasMorePages() ? 'primary' : 'secondary disabled'}}" href="{{ $posts->nextPageUrl() }}">
+
+            Next
+        </a>
     </nav>
 
 @endsection
